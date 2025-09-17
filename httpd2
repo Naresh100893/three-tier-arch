@@ -153,22 +153,6 @@ $stmt->close();
 
 ===========================================================================================================
 
-/var/www/html/products
-[ec2-user@appserver products]$ cat mobiles.php 
-
-<?php
-session_start();
-
-// Initialize cart if not already
-if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = [];
-}
-
-// Add to cart action
-if (isset($_GET['add'])) {
-    $_SESSION['cart'][] = $_GET['add'];
-    echo " Item added to cart! <a href='/place_order'>Proceed to Checkout</a><br><br>";
-}
 [ec2-user@appserver products]$ cat mobiles.php 
 <?php
 session_start();
